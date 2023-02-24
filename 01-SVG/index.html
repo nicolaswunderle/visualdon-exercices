@@ -14,24 +14,56 @@
 
     <h1>Dessiner des formes</h1>
     <h2>Rectangle</h2>
+    <svg width="400" height="100">
+      <rect x="0" y="0" width="400" height="100" fill="#f00" />
+    </svg>
 
     <h2>Donut</h2>
-
+    <svg width="120" height="120">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="black" stroke-width="30" />
+    </svg>
+    <svg width="120" height="120">
+      <circle cx="50" cy="50" r="60" fill="transparent" stroke="black" stroke-width="1" />
+      <circle cx="50" cy="50" r="30" fill="transparent" stroke="black" stroke-width="1" />
+    </svg>
 
     <h2>Ligne</h2>
-
+    <svg width="200" height="100">
+      <line x1="20" y1="50" x2="79" y2="53" stroke="black" />
+    </svg>
 
     <h2>Path</h2>
+    <svg width="1000" height="100">
+      <path d="M 1 100 V 0 L 50 100 V 0 M 70 0 V 100 M 140 1 H 90 V 99 H 140 M 210 1 H 160 V 99 H 210 V 1 M 230 0 V 99 H 280 M 300 100 L 325 0 L 350 100 M 312.5 50 H 337.5 M 420 1 H 370 V 50 H 420 V 99 H 370" stroke="black" fill="transparent" />
+    </svg>
+    
 
 
     <h1>Animer des formes</h1>
 
     <h2>On click</h2>
+    <svg width="400" height="100">
+      <rect id="rectangle" x="0" y="0" width="400" height="100" fill="#f00" />
+    </svg>
 
     <h2>On hover</h2>
+    <svg width="120" height="120">
+      <circle id="donutrempli" cx="50" cy="50" r="45" fill="none" stroke="black" stroke-width="30" />
+    </svg>
+    <svg width="120" height="120">
+      <circle id="donutvide" cx="50" cy="50" r="60" fill="transparent" stroke="black" stroke-width="1" />
+      <circle cx="50" cy="50" r="30" fill="transparent" stroke="black" stroke-width="1" />
+    </svg>
 
     <h2>Prenez la première lettre de votre prénom que vous avez créée ci-dessus. Faite bouger une forme de votre choix le long de la lettre</h2>
-
+    <svg width="200" height="120">
+    <path d="M 5 100 V 5 L 50 100 V 5" stroke="black" fill="transparent" id="prenom" />
+    <circle cx="" cy="" r="5" fill="red">
+      <animateMotion dur="6s" repeatCount="indefinite">
+        <mpath xlink:href="#prenom"/>
+      </animateMotion>
+    </circle>
+    </svg>
 
   </body>
 </html>
