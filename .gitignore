@@ -1,6 +1,5 @@
 *.DS_Store
-*/node_modules
-*/*/node_modules
+**/node_modules
 *.idea
 .vscode/*
 !.vscode/settings.json
@@ -15,5 +14,5 @@
 # Built Visual Studio Code Extensions
 *.vsix
 
-*/package-lock.json
+# un seul * permet d'aller dans un niveau d'arborecence alors que ** permet de regarder dans toute l'arborescence au dessus
 **/package-lock.json
